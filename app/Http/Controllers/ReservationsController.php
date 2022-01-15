@@ -22,7 +22,7 @@ class ReservationsController extends Controller
         $reservation->date_out = $date_out;
 
         $reservation->room()->associate($room);
-        $reversation->client()->associate($client);
+        $reservation->client()->associate($client);
         $reservation->save();
 
         return redirect()->route('clients');
